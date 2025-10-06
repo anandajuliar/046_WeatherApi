@@ -33,3 +33,83 @@
         }
     </style>
 </head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center main-title">Cek Cuaca</h1>
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" id="input-lokasi" class="form-control form-control-lg" placeholder="Masukkan Nama Kota (mis: Jakarta, London)" required>
+                    <button class="btn btn-primary btn-lg" type="button" id="btn-cari">
+                        Cari Cuaca
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card weather-card p-4" id="tampilan-cuaca">
+                    <div id="loading-message" class="text-center text-muted">
+                        Masukkan nama lokasi dan klik "Cari Cuaca" untuk memulai.
+                    </div>
+                    
+                    <div id="hasil-data" style="display: none;">
+                        <div class="text-center mb-4">
+                            <span class="data-label fs-5">Cuaca di</span>
+                            <h2 id="lokasi-display" class="mb-0 text-dark"></h2>
+                        </div>
+                        
+                        <div class="text-center mb-5">
+                            <span id="suhu-display">--</span> 
+                            <span class="align-top display-6">°C</span>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-transparent">
+                                        <span class="data-label">Negara:</span> 
+                                        <span id="negara-val" class="data-value">--</span>
+                                    </li>
+                                    <li class="list-group-item bg-transparent">
+                                        <span class="data-label">Provinsi/Region:</span> 
+                                        <span id="provinsi-val" class="data-value">--</span>
+                                    </li>
+                                    <li class="list-group-item bg-transparent">
+                                        <span class="data-label">Kecamatan/Area:</span> 
+                                        <span id="kecamatan-val" class="data-value">--</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-transparent">
+                                        <span class="data-label">Latitude (Lintang):</span> 
+                                        <span id="latitude-val" class="data-value">--</span>
+                                    </li>
+                                    <li class="list-group-item bg-transparent">
+                                        <span class="data-label">Longitude (Bujur):</span> 
+                                        <span id="longitude-val" class="data-value">--</span>
+                                    </li>
+                                    <li class="list-group-item bg-transparent">
+                                        <span class="data-label">Kondisi:</span> 
+                                        <span id="kondisi-val" class="data-value">--</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+</body>
+</html>
+
+
