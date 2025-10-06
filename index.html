@@ -3,37 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuaca</title>
+    <title>Informasi Cuaca Sederhana</title>
+    <style>
+        body {
+            background-color: #f0f8ff; 
+            padding-top: 50px;
+        }
+        .weather-card {
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, #ffffff, #e0f7fa); 
+        }
+        .data-label {
+            font-weight: 600;
+            color: #555;
+        }
+        .data-value {
+            color: #007bff;
+            font-weight: 700;
+        }
+        #suhu-display {
+            font-size: 4rem;
+            color: #dc3545; 
+        }
+        .main-title {
+            color: #007bff;
+            margin-bottom: 30px;
+            font-weight: 800;
+        }
+    </style>
 </head>
-<body>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-   Cuaca: <p id="lokasi"></p>
-   <hr>
-   <div id="tampilan"></div>
-
-   <script>
-        const kota = "Yogyakarta";
-        const urlapi = "http://api.weatherapi.com/v1/current.json?key=8a28fd6a742b4fdcb0340607250610&q=Yogyakarta&aqi=no";
-   
-        $.ajax({
-            url : urlapi,
-            method : "GET",
-            success : function(data){
-                console.log(data);
-                const v = document.getElementById("Tampilan");
-                let suhu = data.current.temp_c;
-                let lokasi = data.location.name;
-                v.innerHTML = shuh;
-                const l = document.getElementById("lokasi");
-                l.innerHTML = lokasi;
-            },
-            fail: function (error){
-                console.log(error);
-            },
-
-        })
-    </script>
-
-</body>
-</html>
